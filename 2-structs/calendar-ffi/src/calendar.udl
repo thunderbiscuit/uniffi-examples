@@ -1,0 +1,7 @@
+namespace calendar {};
+
+dictionary CalendarOptions {
+  string name;
+  u32 year;
+  boolean private;
+};
