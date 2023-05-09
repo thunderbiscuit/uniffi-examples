@@ -3,6 +3,8 @@ This repository hosts a series of examples that demonstrate how to develop langu
 
 The most important files are located in the `calendar-ffi/src/` directories. The `calendar-ffi/src/lib.rs` file contains the Rust code that is exposed to the other languages. The `calendar-ffi/src/calendar.udl` file contains the API definition used by uniffi-rs to generate the bindings.
 
+<br/>
+
 ## Build the examples and run the tests
 You can build the libraries and run the tests with the following commands:
 ```shell
@@ -10,6 +12,8 @@ cd 1-functions/
 ./gradlew buildKotlinLib
 ./gradlew test
 ```
+
+<br/>
 
 ## Functions
 The [1-functions](1-functions/) example demonstrates how to expose root-level functions.
@@ -25,3 +29,8 @@ If there are no functions to expose, the `namespace` block is left empty:
 ```uniffi-dl
 namespace calendar {};
 ```
+
+<br/>
+
+## Structs
+The [2-structs](2-structs/) example demonstrates how to expose structs that don't have associated functions.

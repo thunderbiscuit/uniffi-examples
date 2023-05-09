@@ -9,3 +9,7 @@ build
 libcalendarffi.so
 libcalendarffi.dylib
 calendar.kt
+
+node_modules/
+.temp/
+.cache/
