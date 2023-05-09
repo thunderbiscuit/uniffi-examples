@@ -1,0 +1,17 @@
+namespace calendar {};
+
+interface Calendar {
+  constructor(i32 id);
+
+  string get_info();
+
+  i32 add(i32 a, i32 b);
+
+  [Throws=CalendarError]
+  i32 divide(i32 a, i32 b);
+};
+
+[Error]
+enum CalendarError {
+  "DivisionBy0",
+};
