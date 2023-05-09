@@ -1,12 +1,15 @@
 import { defaultTheme, defineUserConfig } from 'vuepress'
 
 export default defineUserConfig({
-    lang: 'en-US',
-    title: 'Uniffi Examples',
-    description: 'Just playing around',
+    lang: "en-US",
+    title: "Uniffi Examples",
+    description: "Just playing around",
+    base: "/uniffi-examples/",
     theme: defaultTheme(
         {
             sidebarDepth: 0,
+            contributors: false,
+            lastUpdated: false,
             sidebar: [
                 {
                     text: "Getting Started",
