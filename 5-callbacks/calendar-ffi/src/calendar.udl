@@ -1,0 +1,30 @@
+namespace calendar {};
+
+callback interface Reminder {
+  [Throws=CalendarError]
+  string remind_me();
+
+  [Throws=CalendarError]
+  void ping_me(Event event);
+};
+
+interface Calendar {
+  constructor(Reminder reminder);
+
+  string today();
+
+  string my_reminder();
+
+  void start();
+};
+
+enum Event {
+  "Party",
+  "Birthday",
+  "Meeting",
+};
+
+[Error]
+enum CalendarError {
+  "EventError",
+};
