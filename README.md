@@ -10,3 +10,18 @@ cd 1-functions/
 ./gradlew buildKotlinLib
 ./gradlew test
 ```
+
+## Functions
+The [1-functions](1-functions/) example demonstrates how to expose root-level functions.
+
+Note that the `namespace` block _must_ be present, and that root-level functions are defined in it, like so:
+```uniffi-dl
+namespace calendar {
+  string welcome(string name);
+};
+```
+
+If there are no functions to expose, the `namespace` block is left empty:
+```uniffi-dl
+namespace calendar {};
+```
