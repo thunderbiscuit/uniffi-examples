@@ -19,3 +19,12 @@ dictionary CalendarOptions {
   boolean private;
 };
 ```
+
+And the resulting Kotlin class would look like this:
+```kotlin
+data class CalendarOptions (
+    var name: String, 
+    var year: UInt, 
+    var private: Boolean
+)
+```

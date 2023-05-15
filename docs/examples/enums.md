@@ -18,6 +18,7 @@ pub enum Month {
     December,
 }
 ```
+
 We expose it in the UDL language using the `enum` keyword like so:
 ```uniffi-udl
 namespace calendar {};
