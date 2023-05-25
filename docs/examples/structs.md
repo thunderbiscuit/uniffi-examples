@@ -28,3 +28,24 @@ data class CalendarOptions (
     var private: Boolean
 )
 ```
+
+## Fields with object references
+If a dictionary contains a field whose type is an interface, then that field will hold a reference to an underlying instance of a Rust struct. The Rust code for working with such fields must store them as an `Arc` in order to help properly manage the lifetime of the instance. So if the UDL interface looked like this:
+```uniffi-udl
+interface User {
+  // Some sort of "user" object that can own todo items
+};
+
+dictionary TodoEntry {
+    User owner;
+    string text;
+}
+```
+
+Then the corresponding Rust code would need to look like this:
+```rust
+struct TodoEntry {
+    owner: Arc<User>,
+    text: String,
+}
+```
