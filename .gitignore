@@ -11,5 +11,5 @@ libcalendarffi.dylib
 calendar.kt
 
 node_modules/
-.temp/
-.cache/
+cache/
+dist/

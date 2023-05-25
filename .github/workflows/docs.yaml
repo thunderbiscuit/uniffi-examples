@@ -21,11 +21,11 @@ jobs:
           # choose node.js version to use
           node-version: 18
 
-      - name: "Install dependencies"
-        run: npm install
-
-      - name: "Build VuePress site"
-        run: npm run docs:build
+      - name: "Install dependencies and build VitPress site"
+        run: |
+          cd ./docs/
+          npm install
+          npm run docs:build
 
       # please check out the docs of the workflow for more details
       # @see https://github.com/crazy-max/ghaction-github-pages
@@ -34,8 +34,8 @@ jobs:
         with:
           # deploy to gh-pages branch
           target_branch: gh-pages
-          # deploy the default output dir of VuePress
-          build_dir: docs/.vuepress/dist
+          # deploy the default output dir of VitePress
+          build_dir: docs/.vitepress/dist
         env:
           # @see https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
