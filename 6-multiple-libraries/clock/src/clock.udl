@@ -1,0 +1,11 @@
+namespace clock {};
+
+dictionary Clock {
+  u64 id;
+  ClockType clock_type;
+};
+
+enum ClockType {
+  "Digital",
+  "Analog",
+};

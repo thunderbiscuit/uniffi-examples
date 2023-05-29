@@ -1,0 +1,22 @@
+[package]
+name = "calendar-ffi"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["staticlib", "cdylib"]
+name = "calendarffi"
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "uniffi-bindgen.rs"
+
+[features]
+default = ["uniffi/cli"]
+
+[dependencies]
+uniffi = { version = "0.23.0" }
+clockffi = { path = "../clock/" }
+
+[build-dependencies]
+uniffi = { version = "0.23.0", features = ["build"] }
