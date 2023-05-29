@@ -1,0 +1,12 @@
+namespace calendar {};
+
+interface Calendar {
+  constructor(i32 id, ClockType clock_type);
+
+  string get_info();
+
+  i32 add(i32 a, i32 b);
+};
+
+[External="clock_ffi"]
+typedef extern ClockType;

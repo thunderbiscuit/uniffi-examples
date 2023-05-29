@@ -1,0 +1,6 @@
+namespace clock {};
+
+enum ClockType {
+  "Digital",
+  "Analog",
+};
