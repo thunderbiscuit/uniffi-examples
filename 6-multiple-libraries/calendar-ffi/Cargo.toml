@@ -16,7 +16,7 @@ default = ["uniffi/cli"]
 
 [dependencies]
 uniffi = { version = "0.23.0" }
-clockffi = { path = "../clock/" }
+clock_ffi = { path = "../clock-ffi/" }
 
 [build-dependencies]
 uniffi = { version = "0.23.0", features = ["build"] }

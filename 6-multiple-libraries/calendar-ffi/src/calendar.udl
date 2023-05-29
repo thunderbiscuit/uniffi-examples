@@ -8,8 +8,8 @@ interface Calendar {
   i32 add(i32 a, i32 b);
 };
 
-[External="clockffi"]
+[External="clock_ffi"]
 typedef extern Clock;
 
-[External="clockffi"]
+[External="clock_ffi"]
 typedef extern ClockType;

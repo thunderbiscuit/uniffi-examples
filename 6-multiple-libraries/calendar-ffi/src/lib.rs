@@ -1,4 +1,4 @@
-use clockffi::Clock;
+use clock_ffi::Clock;
 
 uniffi::include_scaffolding!("calendar");
 

@@ -1,11 +1,11 @@
 [package]
-name = "clockffi"
+name = "clock_ffi"
 version = "0.1.0"
 edition = "2021"
 
 [lib]
 crate-type = ["staticlib", "cdylib", "rlib"]
-name = "clockffi"
+name = "clock_ffi"
 
 [[bin]]
 name = "uniffi-bindgen"
