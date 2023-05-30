@@ -8,7 +8,7 @@ This repository hosts a series of examples that demonstrate how to develop langu
 ## Build the examples and run the tests
 You can build the libraries and run the tests with the following commands:
 ```shell
-cd 1-functions/
+cd 1-functions/calendar-kotlin/
 ./gradlew buildKotlinLib
 ./gradlew test
 ```
