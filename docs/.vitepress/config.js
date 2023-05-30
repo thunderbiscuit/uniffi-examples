@@ -29,6 +29,7 @@ export default defineConfig({
           { text: "Enums", link: "/examples/enums.md" },
           { text: "Structs", link: "/examples/structs.md" },
           { text: "Objects", link: "/examples/objects.md" },
+          { text: "Callbacks", link: "/examples/callbacks.md" },
         ]
       },
     ],
