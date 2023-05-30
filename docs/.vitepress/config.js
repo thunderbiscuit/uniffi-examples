@@ -30,6 +30,7 @@ export default defineConfig({
           { text: "Structs", link: "/examples/structs.md" },
           { text: "Objects", link: "/examples/objects.md" },
           { text: "Callbacks", link: "/examples/callbacks.md" },
+          { text: "Multiple Libraries", link: "/examples/multiple-libraries.md" },
         ]
       },
     ],
