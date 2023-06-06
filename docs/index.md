@@ -5,6 +5,16 @@ The repository hosts a series of examples that demonstrate how to develop langua
 
 <br/>
 
+## Prerequisites
+The examples in this repository output a Kotlin library meant to run on the JVM, version 11 or later. To build the examples, you'll need to install the following tools:
+1. [Rust](https://www.rust-lang.org/tools/install) (if you are building on macOS, also install the required intel and M1 JVM targets):
+```shell
+rustup target add x86_64-apple-darwin aarch64-apple-darwin
+```
+2. A JVM version 11 or later (a great tool to install that is [SDKMAN!](https://sdkman.io/))
+3. Kotlin (a fantastic tool to install that is [SDKMAN!](https://sdkman.io/))
+4. Gradle (you guessed it... [SDKMAN!](https://sdkman.io/))
+
 ## Build the examples and run the tests
 You can build the libraries and run the tests using directory-specific variations of the following commands:
 ```shell
