@@ -15,5 +15,5 @@ You can use these to compose libraries for different use cases:
 
 Alternatively, Mozilla is building the uniffi-rs library to allow for a plugin system to emerge and enable further languages to be supported outside the 4 "core" languages already supported. Projects are in the works for:
 1. [Kotlin Multiplatform](https://gitlab.com/trixnity/uniffi-kotlin-multiplatform-bindings)
-2. Go
+2. [Go](https://github.com/NordSecurity/uniffi-bindgen-go)
 3. [C#](https://github.com/NordSecurity/uniffi-bindgen-cs)
