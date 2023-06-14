@@ -8,10 +8,11 @@ To see how to leverage the resulting libraries, explore and play with the tests 
 <br/>
 
 ## Build the examples and run the tests
-You can build the libraries and run the tests with the following commands:
+You can build the libraries and run the tests using directory-specific variations of the following commands:
 ```shell
 git clone git@github.com:thunderbiscuit/uniffi-examples.git
-cd ./uniffi-examples/1-functions/
+cd ./uniffi-examples/
+cd ./1-functions/calendar-kotlin/
 ./gradlew buildKotlinLib
 ./gradlew test
 ```

@@ -14,13 +14,3 @@ rustup target add x86_64-apple-darwin aarch64-apple-darwin
 2. A JVM version 11 or later (a great tool to install that is [SDKMAN!](https://sdkman.io/))
 3. Kotlin (a fantastic tool to install that is [SDKMAN!](https://sdkman.io/))
 4. Gradle (you guessed it... [SDKMAN!](https://sdkman.io/))
-
-## Build the examples and run the tests
-You can build the libraries and run the tests using directory-specific variations of the following commands:
-```shell
-git clone git@github.com:thunderbiscuit/uniffi-examples.git
-cd ./uniffi-examples/
-cd ./1-functions/calendar-kotlin/
-./gradlew buildKotlinLib
-./gradlew test
-```
