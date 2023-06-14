@@ -33,6 +33,17 @@ export default defineConfig({
           { text: "Multiple Libraries", link: "/examples/multiple-libraries.md" },
         ]
       },
+
+      // Building and Publishing
+      {
+        text: "Building and Publishing",
+        collapsed: false,
+        items: [
+          { text: "Building Complete Libraries", link: "/build-workflows/final-product.md" },
+          { text: "General Approach", link: "/build-workflows/general.md" },
+          { text: "Optimizations", link: "/build-workflows/optimizations.md" },
+        ]
+      },
     ],
   },
 })
