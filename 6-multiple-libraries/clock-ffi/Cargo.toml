@@ -4,8 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [lib]
-crate-type = ["cdylib", "lib"]
-#crate-type = ["staticlib", "cdylib", "rlib", "lib"]
+crate-type = ["lib"]
 name = "clock_ffi"
 
 [features]
@@ -13,8 +12,6 @@ default = ["uniffi/cli"]
 
 [dependencies]
 uniffi = { git = "https://github.com/mozilla/uniffi-rs.git", branch = "main" }
-#uniffi = { version = "0.23.0" }
 
 [build-dependencies]
 uniffi = { git = "https://github.com/mozilla/uniffi-rs.git", branch = "main" , features = ["build"] }
-#uniffi = { version = "0.23.0", features = ["build"] }
