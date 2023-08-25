@@ -31,6 +31,7 @@ export default defineConfig({
           { text: "Objects", link: "/examples/objects.md" },
           { text: "Callbacks", link: "/examples/callbacks.md" },
           { text: "Multiple Libraries", link: "/examples/multiple-libraries.md" },
+          { text: "Async", link: "/examples/async.md" },
         ]
       },
 
