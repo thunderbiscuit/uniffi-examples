@@ -7,12 +7,16 @@ edition = "2021"
 crate-type = ["staticlib", "cdylib", "lib"]
 name = "calendarffi"
 
+[[bin]]
+name = "uniffi-bindgen"
+path = "uniffi-bindgen.rs"
+
 [features]
 default = ["uniffi/cli"]
 
 [dependencies]
-uniffi = { git = "https://github.com/mozilla/uniffi-rs.git", branch = "main" }
 clock_ffi = { path = "../clock-ffi/" }
+uniffi = { version = "=0.28.0" }
 
 [build-dependencies]
-uniffi = { git = "https://github.com/mozilla/uniffi-rs.git", branch = "main", features = ["build"] }
+uniffi = { version = "=0.28.0", features = ["build"] }

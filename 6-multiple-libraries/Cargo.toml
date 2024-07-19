@@ -1,7 +1,0 @@
-[workspace]
-
-members = [
-    "calendar-ffi",
-    "clock-ffi",
-    "uniffi-bindgen",
-]

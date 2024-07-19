@@ -1,7 +1,5 @@
 use clock_ffi::ClockType;
 
-uniffi::include_scaffolding!("calendar");
-
 struct Calendar {
     id: i32,
     clock_type: ClockType,
@@ -23,3 +21,5 @@ impl Calendar {
         a + b
     }
 }
+
+uniffi::include_scaffolding!("calendar");
