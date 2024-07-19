@@ -1,11 +1,14 @@
 # Supported Languages
-Uniffi-rs natively supports the following languages:
+
+Uniffi natively supports the following languages:
+
 1. Kotlin
 2. Swift
 3. Python
 4. Ruby
 
 You can use these to compose libraries for different use cases:
+
 1. Kotlin on JVM server-side
 2. Kotlin on Android
 3. Swift on iOS
