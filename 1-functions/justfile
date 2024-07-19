@@ -1,0 +1,5 @@
+build:
+  cd ./scripts/ && bash build-macos-aarch64.sh
+
+test:
+  cd ./calendar-kotlin && ./gradlew test
