@@ -1,48 +1,41 @@
-import org.gradle.api.tasks.testing.logging.TestExceptionFormat.*
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.gradle.api.tasks.testing.logging.TestLogEvent.*
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.6.10"
-    id("java-library")
-    id("maven-publish")
-    id("signing")
+    id("org.jetbrains.kotlin.jvm") version "2.0.0"
+    id("org.gradle.java-library")
+    id("org.gradle.maven-publish")
+    id("org.gradle.signing")
 }
 
 repositories {
     mavenCentral()
 }
 
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_17)
+    }
+}
+
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
     withSourcesJar()
     withJavadocJar()
 }
 
 tasks.withType<Test> {
-    useJUnitPlatform()
-
-    testLogging {
+   testLogging {
         events(PASSED, SKIPPED, FAILED, STANDARD_OUT, STANDARD_ERROR)
-        exceptionFormat = FULL
         showExceptions = true
         showCauses = true
-        showStackTraces = true
     }
 }
 
 dependencies {
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7")
     implementation("net.java.dev.jna:jna:5.12.0")
-    api("org.slf4j:slf4j-api:1.7.30")
-    testImplementation("junit:junit:4.13.2")
-    testRuntimeOnly("org.junit.vintage:junit-vintage-engine:5.8.2")
-    testImplementation("ch.qos.logback:logback-classic:1.2.3")
-    testImplementation("ch.qos.logback:logback-core:1.2.3")
 
-    // Use the Kotlin test library
     testImplementation(kotlin("test"))
 }
 
@@ -56,7 +49,7 @@ afterEvaluate {
 
                 from(components["java"])
                 pom {
-                    name.set("calculator-android")
+                    name.set("calculator-kotlin")
                     description.set("Calendar Kotlin language bindings for the JVM.")
                     url.set("")
                     licenses {
