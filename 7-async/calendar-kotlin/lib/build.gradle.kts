@@ -6,9 +6,6 @@ plugins {
     id("java-library")
     id("maven-publish")
     id("signing")
-
-    // Custom plugin to generate the native libs and bindings file
-    id("org.examples.plugins.generate-kotlin-bindings")
 }
 
 repositories {
@@ -35,7 +32,7 @@ tasks.withType<Test> {
 }
 
 dependencies {
-    implementation("net.java.dev.jna:jna:5.8.0")
+    implementation("net.java.dev.jna:jna:5.12.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
     api("org.slf4j:slf4j-api:1.7.30")
     testImplementation("junit:junit:4.13.2")

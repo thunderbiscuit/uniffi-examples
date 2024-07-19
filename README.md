@@ -6,9 +6,21 @@ This repository hosts a series of examples that demonstrate how to develop langu
 <br/>
 
 ## Build the examples and run the tests
-You can build the libraries and run the tests with the following commands:
+If you work with the [just](https://github.com/casey/just) cli tool, you can build the libraries and run the tests using the following commands:
+
 ```shell
-cd 1-functions/calendar-kotlin/
-./gradlew buildKotlinLib
+cd 1-functions/
+just build
+just test
+```
+
+Otherwise, you can also use:
+
+```shell
+cd 1-functions/
+cd ./scripts/
+bash build-macos-aarch64.sh
+
+cd ../calendar-kotlin/
 ./gradlew test
 ```

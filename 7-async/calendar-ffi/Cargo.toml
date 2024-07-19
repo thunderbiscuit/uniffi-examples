@@ -15,9 +15,9 @@ path = "uniffi-bindgen.rs"
 default = ["uniffi/cli"]
 
 [dependencies]
-uniffi = { version = "0.24.3" }
+uniffi = { version = "=0.28.0" }
 async-std = "1.12.0"
 thiserror = "1.0"
 
 [build-dependencies]
-uniffi = { version = "0.24.3", features = ["build"] }
+uniffi = { version = "=0.28.0", features = ["build"] }
