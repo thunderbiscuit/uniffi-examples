@@ -4,3 +4,8 @@ enum ClockType {
   "Digital",
   "Analog",
 };
+
+enum OtherTypeNotUseful {
+  "Maybe",
+  "MaybeNot",
+};
